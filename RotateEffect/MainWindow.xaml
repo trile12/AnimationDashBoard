@@ -1,0 +1,604 @@
+﻿<Window
+    x:Class="RotateEffect.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RotateEffect"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1366"
+    Height="768"
+    Background="Transparent"
+    Loaded="Window_Loaded"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Storyboard x:Key="animBorder">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(FrameworkElement.Height)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="767.8" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="220">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:02.4000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:02.6000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:02.8000000" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="190">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="animatedBorder" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.4000000" Value="220">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="Width">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="220" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="210" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="225" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="Height">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="150" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="145" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="155" />
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="Width">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="220" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="210" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="225" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="Height">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="150" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="145" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="155" />
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="Width">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="220" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="210" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="225" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="Height">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="150" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="145" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="155" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Border
+        Background="Black"
+        BorderThickness="5"
+        CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    x:Name="textBlock"
+                    Margin="-450,40,20,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="26"
+                    FontWeight="Medium"
+                    Foreground="White"
+                    RenderTransformOrigin="0.5,0.5"
+                    Text="YOUR CONTENT">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <Border
+                    Name="animatedBorder"
+                    Grid.Row="1"
+                    Width="190"
+                    Height="50"
+                    Margin="-480,148,0,0"
+                    VerticalAlignment="Top"
+                    Background="Gray"
+                    CornerRadius="10"
+                    Opacity=".7">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                </Border>
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                    <Button
+                        x:Name="button"
+                        Content="Dashboard"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsHomeButton" />
+                    <Button
+                        x:Name="button1"
+                        Content="Investment"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsInvestButton" />
+                    <Button
+                        x:Name="button2"
+                        Content="Career"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsCareerButton" />
+                    <Button
+                        x:Name="button3"
+                        Content="Wallet"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsWalletButton" />
+                    <Button
+                        x:Name="button4"
+                        Content="News"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsNewButton" />
+                    <Button
+                        x:Name="button5"
+                        Content="Settings"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsSettingButton" />
+                    <Button
+                        x:Name="button6"
+                        Content="Support"
+                        PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
+                        Style="{StaticResource ButtonLink}"
+                        Tag="IsSupportButton" />
+                </StackPanel>
+
+                <Canvas Grid.RowSpan="3" HorizontalAlignment="Right">
+                    <Border
+                        x:Name="border"
+                        Grid.RowSpan="3"
+                        Width="0.2"
+                        Height="0"
+                        HorizontalAlignment="Right"
+                        Background="Gray"
+                        BorderThickness="0" />
+                </Canvas>
+                <Button
+                    x:Name="button7"
+                    Grid.Row="2"
+                    Margin="-150,0,0,20"
+                    Content="Log Out"
+                    Style="{StaticResource ButtonLink}"
+                    Tag="IsLogOutButton" />
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Border
+                            Width="0.2"
+                            HorizontalAlignment="Right"
+                            Background="Gray"
+                            BorderThickness="0" />
+                        <Button x:Name="animation" Click="animation_Click" />
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Border
+                            Width="0.2"
+                            HorizontalAlignment="Right"
+                            Background="Gray"
+                            BorderThickness="0" />
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Border
+                            Width="0.2"
+                            HorizontalAlignment="Right"
+                            Background="Gray"
+                            BorderThickness="0" />
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Border
+                            Width="0.2"
+                            HorizontalAlignment="Right"
+                            Background="Gray"
+                            BorderThickness="0" />
+                    </Grid>
+                    <StackPanel
+                        Grid.Column="4"
+                        Margin="0,0,30,0"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontSize="18"
+                            Foreground="White"
+                            Text="Le Minh Tri" />
+                        <Border
+                            Width="60"
+                            Height="60"
+                            Margin="10"
+                            BorderBrush="Red"
+                            BorderThickness="1"
+                            CornerRadius="50">
+                            <Border.Background>
+                                <ImageBrush ImageSource="Images/cat.jpg" Stretch="UniformToFill" />
+                            </Border.Background>
+                        </Border>
+                    </StackPanel>
+                    <Border
+                        Grid.ColumnSpan="4"
+                        Height="0.2"
+                        VerticalAlignment="Bottom"
+                        Background="Gray"
+                        BorderThickness="0" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Margin="30,0,0,10"
+                            Content="Welcome, Le"
+                            FontSize="40"
+                            FontWeight="Medium"
+                            Foreground="White" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid>
+                            <Border
+                                Width="300"
+                                Margin="30,0,20,30"
+                                HorizontalAlignment="Center"
+                                Background="Gray"
+                                CornerRadius="18">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid />
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="180" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid Margin="10,0,30,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid
+                                    x:Name="grid"
+                                    Width="225"
+                                    Height="155"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Grid.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform />
+                                            <SkewTransform />
+                                            <RotateTransform />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </Grid.RenderTransform>
+                                    <Viewbox>
+                                        <local:CustomCard
+                                            x:Name="customCard"
+                                            Title="Earnings from partners"
+                                            Width="225"
+                                            Height="155"
+                                            Description="$1,340"
+                                            ImageData="M109.715,0H27.429C12.28,0,0,12.28,0,27.428v82.287c0,15.149,12.28,27.429,27.429,27.429h82.286    c15.149,0,27.429-12.28,27.429-27.429V27.428C137.144,12.28,124.864,0,109.715,0z M123.43,102.858    c0,11.362-9.21,20.571-20.572,20.571H34.286c-11.361,0-20.572-9.21-20.572-20.571V89.143l27.429-27.429L68.572,96l41.144-41.143    L96.001,48L68.572,75.429L41.143,41.142L13.714,68.572V34.286c0-11.362,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.572,9.21,20.572,20.572V102.858z">
+                                            <local:CustomCard.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform />
+                                                    <SkewTransform />
+                                                    <RotateTransform />
+                                                    <TranslateTransform />
+                                                </TransformGroup>
+                                            </local:CustomCard.RenderTransform>
+                                        </local:CustomCard>
+                                    </Viewbox>
+                                </Grid>
+                                <Grid
+                                    x:Name="grid1"
+                                    Grid.Column="1"
+                                    Width="225"
+                                    Height="155"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Grid.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform />
+                                            <SkewTransform />
+                                            <RotateTransform />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </Grid.RenderTransform>
+                                    <Viewbox>
+                                        <local:CustomCard
+                                            Title="Earnings from investments"
+                                            Width="225"
+                                            Height="155"
+                                            Description="$12,340"
+                                            ImageData="M19 8V8C20.1046 8 21 8.89543 21 10V18C21 19.1046 20.1046 20 19 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H17C18.1046 4 19 4.89543 19 6V8ZM19 8H7M17 14H16">
+                                            <local:CustomCard.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform />
+                                                    <SkewTransform />
+                                                    <RotateTransform />
+                                                    <TranslateTransform />
+                                                </TransformGroup>
+                                            </local:CustomCard.RenderTransform>
+                                        </local:CustomCard>
+                                    </Viewbox>
+                                </Grid>
+                                <Grid
+                                    x:Name="grid2"
+                                    Grid.Column="2"
+                                    Width="225"
+                                    Height="155"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Grid.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform />
+                                            <SkewTransform />
+                                            <RotateTransform />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </Grid.RenderTransform>
+                                    <Viewbox>
+                                        <local:CustomCard
+                                            Title="Total earned"
+                                            Width="225"
+                                            Height="155"
+                                            Description="$1,340"
+                                            ImageData="M24,8h-4c-0.6,0-1,0.4-1,1v3h-3c-0.6,0-1,0.4-1,1v3h-3c-0.6,0-1,0.4-1,1v3H8c-0.6,0-1,0.4-1,1v4c0,0.6,0.4,1,1,1h16    c0.6,0,1-0.4,1-1V9C25,8.4,24.6,8,24,8z M23,24H9v-2h3c0.6,0,1-0.4,1-1v-3h3c0.6,0,1-0.4,1-1v-3h3c0.6,0,1-0.4,1-1v-3h2V24z">
+                                            <local:CustomCard.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform />
+                                                    <SkewTransform />
+                                                    <RotateTransform />
+                                                    <TranslateTransform />
+                                                </TransformGroup>
+                                            </local:CustomCard.RenderTransform>
+                                        </local:CustomCard>
+                                    </Viewbox>
+                                </Grid>
+                            </Grid>
+                            <Border
+                                Grid.Row="1"
+                                Margin="10,0,30,30"
+                                BorderBrush="Gray"
+                                BorderThickness="0.6"
+                                CornerRadius="18">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Border
+                                        Height="250"
+                                        Margin="10"
+                                        BorderBrush="Black"
+                                        BorderThickness="2"
+                                        CornerRadius="10">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Images/bg.jpg" Stretch="UniformToFill" />
+                                        </Border.Background>
+                                    </Border>
+                                    <Grid Grid.Row="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Border
+                                            Grid.RowSpan="2"
+                                            Height="0.2"
+                                            VerticalAlignment="Top"
+                                            Background="Gray"
+                                            BorderThickness="0" />
+                                        <Border Margin="20,10">
+                                            <Grid Margin="10,0,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Border
+                                                        Width="50"
+                                                        Height="40"
+                                                        HorizontalAlignment="Left"
+                                                        CornerRadius="8">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="Images/2.jpg" Stretch="UniformToFill" />
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <TextBlock
+                                                        Margin="10,0,0,0"
+                                                        VerticalAlignment="Center"
+                                                        Foreground="White"
+                                                        Text="Dubai Design Week 2023" />
+                                                </StackPanel>
+                                                <StackPanel
+                                                    Grid.Column="1"
+                                                    HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center"
+                                                    Orientation="Horizontal">
+                                                    <TextBlock
+                                                        Margin="0,0,30,0"
+                                                        Foreground="White"
+                                                        Text="DEC 12, 2022, 09:40" />
+                                                    <TextBlock
+                                                        Margin="0,0,30,0"
+                                                        FontWeight="Medium"
+                                                        Foreground="White"
+                                                        Text="14:00" />
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                        <Border
+                                            Grid.Row="1"
+                                            Margin="20,10"
+                                            Background="Gray"
+                                            CornerRadius="8">
+                                            <Grid Margin="10,0,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Border
+                                                        Width="50"
+                                                        Height="38"
+                                                        HorizontalAlignment="Left"
+                                                        CornerRadius="8">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="Images/3.jpg" Stretch="UniformToFill" />
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <TextBlock
+                                                        Margin="10,0,0,0"
+                                                        VerticalAlignment="Center"
+                                                        Foreground="White"
+                                                        Text="Dubai Design Week 2023" />
+                                                </StackPanel>
+                                                <StackPanel
+                                                    Grid.Column="1"
+                                                    HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center"
+                                                    Orientation="Horizontal">
+                                                    <TextBlock
+                                                        Margin="0,0,30,0"
+                                                        Foreground="White"
+                                                        Text="DEC 12, 2022, 09:40" />
+                                                    <TextBlock
+                                                        Margin="0,0,30,0"
+                                                        FontWeight="Medium"
+                                                        Foreground="White"
+                                                        Text="14:00" />
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
