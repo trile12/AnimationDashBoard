@@ -276,7 +276,13 @@
                             HorizontalAlignment="Right"
                             Background="Gray"
                             BorderThickness="0" />
-                        <Button x:Name="animation" Click="animation_Click" />
+                        <Button
+                            x:Name="animation"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Click="animation_Click"
+                            Visibility="Visible" />
                     </Grid>
                     <Grid Grid.Column="1">
                         <Border
