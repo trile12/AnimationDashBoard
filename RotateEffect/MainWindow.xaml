@@ -8,6 +8,7 @@
     Title="MainWindow"
     Width="1366"
     Height="768"
+    AllowsTransparency="True"
     Background="Transparent"
     Loaded="Window_Loaded"
     ResizeMode="NoResize"
@@ -28,78 +29,8 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
 
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02.4000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02.6000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:02.8000000" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="button7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="190">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="animatedBorder" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="animatedBorder" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:01.4000000" Value="220">
                     <EasingDoubleKeyFrame.EasingFunction>
@@ -142,10 +73,8 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
-    <Border
-        Background="Black"
-        BorderThickness="5"
-        CornerRadius="20">
+    <Grid>
+        <Border Background="Black" CornerRadius="20" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250" />
@@ -187,57 +116,52 @@
                     CornerRadius="10"
                     Opacity=".7">
                     <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform />
-                            <SkewTransform />
-                            <RotateTransform />
-                            <TranslateTransform />
-                        </TransformGroup>
+                        <TranslateTransform />
                     </Border.RenderTransform>
                 </Border>
                 <StackPanel Grid.Row="1" VerticalAlignment="Center">
                     <Button
-                        x:Name="button"
                         Content="Dashboard"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsHomeButton" />
+                        Tag="HomeButton" />
                     <Button
-                        x:Name="button1"
                         Content="Investment"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsInvestButton" />
+                        Tag="InvestButton" />
                     <Button
-                        x:Name="button2"
                         Content="Career"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsCareerButton" />
+                        Tag="CareerButton" />
                     <Button
-                        x:Name="button3"
                         Content="Wallet"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsWalletButton" />
+                        Tag="WalletButton" />
                     <Button
-                        x:Name="button4"
                         Content="News"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsNewButton" />
+                        Tag="NewButton" />
                     <Button
-                        x:Name="button5"
                         Content="Settings"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsSettingButton" />
+                        Tag="SettingButton" />
                     <Button
-                        x:Name="button6"
                         Content="Support"
+                        Loaded="Button_Loaded"
                         PreviewMouseLeftButtonDown="TabMenuLeftButtonDown"
                         Style="{StaticResource ButtonLink}"
-                        Tag="IsSupportButton" />
+                        Tag="SupportButton" />
                 </StackPanel>
 
                 <Canvas Grid.RowSpan="3" HorizontalAlignment="Right">
@@ -606,5 +530,5 @@
                 </Grid>
             </Grid>
         </Grid>
-    </Border>
+    </Grid>
 </Window>
