@@ -47,7 +47,6 @@ namespace RotateEffect
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             animStoryBoard = Resources["animBorder"] as Storyboard;
-            //test
             await Task.Delay(1000);
             animStoryBoard?.Stop();
             animStoryBoard?.Begin();
